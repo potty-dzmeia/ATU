@@ -1,0 +1,424 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Bulgarian (Bulgaria) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_BGR)
+LANGUAGE LANG_BULGARIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ATU                     ICON                    "iconka.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open",                       IDM_FILE_OPEN
+        MENUITEM "&Save",                       IDM_FILE_SAVE
+        MENUITEM "Save &As...",                 IDM_FILE_SAVEAS
+    END
+    POPUP "&Setup"
+    BEGIN
+        MENUITEM "&Ant text",                   IDM_SETUP_ANT
+        MENUITEM "&Tune pwr",                   IDM_SETUP_TUNE
+        MENUITEM "&Open Tune Box",              IDM_SETUP_BOX
+        MENUITEM "&Button disable",             IDM_DISABLE
+        MENUITEM "CommPort Name",               IDM_COMM_PORT
+        MENUITEM "PA Tune pwr",                 ID_SETUP_PATUNEPWR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Index",                      IDM_HELP_INDEX
+        MENUITEM "&About ATU",                  IDM_HELP_ABOUT, HELP
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG DIALOGEX 5, 5, 172, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "About ATU"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,65,31,50,13
+    ICON            "ATU",IDC_STATIC,1,1,21,20
+    LTEXT           "Designed by Potty [ch.levkov@gmail.com]",IDC_STATIC,27,11,142,8
+    LTEXT           "2014",IDC_STATIC,81,19,17,8
+END
+
+IDD_ANT DIALOGEX 0, 96, 110, 135
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Choose name for each antenna button....."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,29,113,50,14
+    EDITTEXT        IDC_EDIT1,29,8,51,12
+    EDITTEXT        IDC_EDIT2,29,24,51,12
+    EDITTEXT        IDC_EDIT3,29,39,51,12
+    EDITTEXT        IDC_EDIT4,29,55,51,12
+    EDITTEXT        IDC_EDIT5,29,71,51,12
+    EDITTEXT        IDC_EDIT6,29,87,51,12
+    LTEXT           "1",IDC_STATIC,12,8,8,9,0,WS_EX_STATICEDGE
+    LTEXT           "2    ",IDC_STATIC,12,25,8,9,0,WS_EX_STATICEDGE
+    LTEXT           "3",IDC_STATIC,12,41,8,11,0,WS_EX_STATICEDGE
+    LTEXT           "4",IDC_STATIC,12,56,8,10,0,WS_EX_STATICEDGE
+    LTEXT           "5",IDC_STATIC,12,73,8,10,0,WS_EX_STATICEDGE
+    LTEXT           "6",IDC_STATIC,12,88,8,11,0,WS_EX_STATICEDGE
+END
+
+IDD_DIALOG1 DIALOG 15, 20, 208, 154
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,151,133,50,14
+    LTEXT           "1,2,3,4,5,6                                Antenna change",IDC_STATIC,13,26,177,8,NOT WS_GROUP
+    LTEXT           "F1                                             Help",IDC_STATIC,13,15,142,8,NOT WS_GROUP
+    LTEXT           "Q,W,E,R,T,Y,U,I,O                   Band change",IDC_STATIC,13,36,147,8,NOT WS_GROUP
+    LTEXT           "A--Z                                           C1 up/down",IDC_STATIC,13,47,151,8,NOT WS_GROUP
+    LTEXT           "-----------------------------Hot Keys--------------------------------------",IDC_STATIC,15,0,164,8
+    LTEXT           "S--X                                           L   up/down",IDC_STATIC,13,57,147,8,NOT WS_GROUP
+    LTEXT           "D--C                                          C2 up/down",IDC_STATIC,14,68,141,8,NOT WS_GROUP
+    LTEXT           "Enter                                         Commonly accepts and                                                    close box",IDC_STATIC,13,89,174,19,NOT WS_GROUP
+    LTEXT           "Ctrl+A....Ctrl+C                          Faster tune steps(x3)",IDC_STATIC,13,78,179,8
+END
+
+IDD_PWR DIALOG 0, 0, 77, 53
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Tune Power"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,13,37,50,14
+    EDITTEXT        IDC_MENU_PWR,18,15,40,14,ES_AUTOHSCROLL
+END
+
+IDD_CHANGES DIALOG 0, 0, 147, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "ATU: ""Save changes?"""
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Yes",ID_YESS,14,34,50,14
+    PUSHBUTTON      "No",ID_NOO,81,34,50,14
+    LTEXT           "Do you want to save the changes?",IDC_STATIC,16,11,113,8
+END
+
+IDD_DISABLE DIALOG 0, 0, 176, 141
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Button disable menu"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "1,8MHz",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,41,10
+    CONTROL         "3,5MHz",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,22,41,10
+    CONTROL         "7MHz",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,38,35,10
+    CONTROL         "10MHz",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,54,39,10
+    CONTROL         "18MHz",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,82,39,10
+    CONTROL         "28MHz",IDC_CHECK19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,124,39,10
+    CONTROL         "21MHz",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,96,39,10
+    CONTROL         "14MHz",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,68,39,10
+    CONTROL         "Ant1",IDC_CHECK20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,7,45,10
+    CONTROL         "Ant2",IDC_CHECK21,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,22,45,10
+    CONTROL         "Ant3",IDC_CHECK22,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,38,45,10
+    CONTROL         "Ant4",IDC_CHECK23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,53,45,10
+    CONTROL         "Ant5",IDC_CHECK24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,68,45,10
+    CONTROL         "Ant6",IDC_CHECK25,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,57,81,45,11
+    CONTROL         "Manual Tune",IDC_CHECK26,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,7,58,10
+    CONTROL         "Tune Pa",IDC_CHECK27,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,20,43,10
+    CONTROL         "Through",IDC_CHECK28,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,33,43,10
+    CONTROL         "Carrier",IDC_CHECK29,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,47,36,10
+    LTEXT           "Check any box if you want  some buttons to be disabled",IDC_STATIC,81,94,89,17
+    CONTROL         "24MHz",IDC_CHECK18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,111,39,10
+    PUSHBUTTON      "OK",IDOK,120,120,50,14
+    CONTROL         "AUTO",IDC_CHECK30,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,112,59,36,10
+    CONTROL         "SSB",IDC_CHECK31,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,71,30,10
+    CONTROL         "CW",IDC_CHECK32,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,111,83,28,10
+    CONTROL         "Quick buttons",IDC_CHECKDISABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,53,118,58,10
+END
+
+IDD_COMM DIALOG 0, 0, 137, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter communication port name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,14,69,50,14
+    EDITTEXT        IDC_COMMPORT,40,46,55,14,ES_AUTOHSCROLL
+    LTEXT           "Unable to open the COM1 port!\nPlease enter valid name for your port. (COM1, Com1, COM2...etc.)",IDC_STATIC,14,16,107,30
+    PUSHBUTTON      "QUIT",IDC_QUITT,71,69,50,14
+END
+
+IDD_COMM1 DIALOG 0, 0, 148, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter CommPort to use"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,45,61,50,14
+    EDITTEXT        IDC_COMMPORT,40,38,60,14,ES_AUTOHSCROLL
+    LTEXT           "Enter current port settings for your rig",IDC_STATIC,13,21,118,11
+END
+
+IDD_TUNEBOX DIALOGEX 36, 100, 225, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TUNE BOX"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_BUTTON1,24,2,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button2",IDC_BUTTON2,24,20,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button3",IDC_BUTTON3,24,38,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button4",IDC_BUTTON4,24,56,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button5",IDC_BUTTON5,24,74,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button6",IDC_BUTTON6,24,91,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button7",IDC_BUTTON7,24,108,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button8",IDC_BUTTON8,24,126,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button9",IDC_BUTTON9,24,144,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "Button10",IDC_BUTTON10,24,161,180,16,BS_FLAT | NOT WS_TABSTOP,WS_EX_STATICEDGE
+    PUSHBUTTON      "DONE",IDC_BUTTON14,68,179,95,19,BS_CENTER | NOT WS_TABSTOP,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+END
+
+IDD_DIALOGSWR DIALOG 228, 65399, 82, 146
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Reverse/Forward"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "1",IDC_STATIC,14,121,8,8
+    LTEXT           "inf",IDC_STATIC,12,25,8,8
+    LTEXT           "--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--\n--",IDC_STATIC,14,33,8,85
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 169
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_ANT, DIALOG
+    BEGIN
+        LEFTMARGIN, 12
+        RIGHTMARGIN, 64
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PWR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 70
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_CHANGES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 140
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DISABLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 134
+    END
+
+    IDD_COMM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 130
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_COMM1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_TUNEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 24
+        RIGHTMARGIN, 204
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_DIALOGSWR, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 80
+        BOTTOMMARGIN, 144
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS
+BEGIN
+    "1",            ID_ANT1,                ASCII,  NOINVERT
+    "2",            ID_ANT2,                ASCII,  NOINVERT
+    "3",            ID_ANT3,                ASCII,  NOINVERT
+    "4",            ID_ANT4,                ASCII,  NOINVERT
+    "5",            ID_ANT5,                ASCII,  NOINVERT
+    "6",            ID_ANT6,                ASCII,  NOINVERT
+    "A",            ID_C1UP,                VIRTKEY, NOINVERT
+    "A",            ID_C1FASTUP,            VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_C2DOWN,              VIRTKEY, NOINVERT
+    "C",            ID_C2FASTDOWN,          VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_C2UP,                VIRTKEY, NOINVERT
+    "D",            ID_C2FASTUP,            VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_BAND3,               VIRTKEY, NOINVERT
+    "I",            ID_BAND8,               VIRTKEY, NOINVERT
+    "O",            ID_BAND9,               VIRTKEY, NOINVERT
+    "Q",            ID_BAND1,               VIRTKEY, NOINVERT
+    "R",            ID_BAND4,               VIRTKEY, NOINVERT
+    "S",            ID_LUP,                 VIRTKEY, NOINVERT
+    "S",            ID_LFASTUP,             VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_BAND5,               VIRTKEY, NOINVERT
+    "U",            ID_BAND7,               VIRTKEY, NOINVERT
+    VK_F1,          IDM_HELP,               VIRTKEY, NOINVERT
+    "W",            ID_BAND2,               VIRTKEY, NOINVERT
+    "X",            ID_LDOWN,               VIRTKEY, NOINVERT
+    "X",            ID_LFASTDOWN,           VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_BAND6,               VIRTKEY, NOINVERT
+    "Z",            ID_C1DOWN,              VIRTKEY, NOINVERT
+    "Z",            ID_C1FASTDOWN,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "atu.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,0
+ PRODUCTVERSION 0,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "First complete working version.(Icom only)"
+            VALUE "CompanyName", "Compot"
+            VALUE "FileDescription", "ATU.exe"
+            VALUE "FileVersion", "1.2.0.0"
+            VALUE "InternalName", "asd"
+            VALUE "LegalCopyright", "Copyright © 2004"
+            VALUE "OriginalFilename", "ATU.exe"
+            VALUE "ProductName", "PottyTune"
+            VALUE "ProductVersion", "0, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Bulgarian (Bulgaria) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
